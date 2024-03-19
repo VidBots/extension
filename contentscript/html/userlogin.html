@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/userlogin.css">
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../js/userlogin.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<div class="container" id="login-box">
+
+    <button id ="signup_Button">Sign Up</button>
+
+
+    <div class="form-container sign-up-container" id="signupcss">
+        <form>
+            
+            <h1>Sign Up</h1>           
+            <div class="txtb">
+                <input type="text" id="signupAccount">
+                <span data-placeholder="Account"></span>
+            </div>
+            <div class="txtb">
+                <input type="email" id="signupEmail">
+                <span data-placeholder="Email"></span>
+            </div> 
+            <div class="txtb">
+                <input type="text" id="Token">
+                <span data-placeholder="Personal Token for ShuiShan"></span>
+            </div> 
+            <div class="txtb">
+                <input type="password" id="signupPassword">
+                <span data-placeholder="Password"></span>
+            </div>
+            <div class="txtb">
+                <input type="password" id="signupConfirmedPassword">
+                <span data-placeholder="Confirm Password"></span>
+            </div> 
+                       
+            
+        </form>
+    </div>
+
+    <button class="close_icon_button" id="loginClose"><i class="fa fa-close"></i></button>
+
+    <div class="form-container sign-in-container">
+
+        <form action="#">
+            <h1>Login</h1>
+            <div class="txtb">
+                <input type="text" id="loginAccount">
+                <span data-placeholder="Account"></span>
+            </div>
+            <div class="txtb" >
+                <input type="password" id="loginPassword">
+                <span data-placeholder="Password"></span>
+            </div>
+            <a href="../html/passwordfind.html" target="_blank" class="forget" title="Click to retrieve password">Forgot Password?</a>
+            <button id="loginButton">Login</button>
+
+
+        </form>
+    </div>
+
+    
+    <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Already have an account?</h1>
+                    <p>Please use your account to log in</p>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Don't have an account?</h1>
+                    <p>Join us now and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        
+    </div>
+</div>
+</body>
+
+</html>

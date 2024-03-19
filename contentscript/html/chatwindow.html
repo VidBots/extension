@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../js/chat.js"></script>
+    <script src="../js/socket.io.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- Style imports -->
+    <link rel="stylesheet" type="text/css" href="../css/chat.css">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+</head>
+
+<body>
+    <!-- Entry -->
+    <div class="chat_commento">
+        <!-- Top -->
+        <div class="chat_top">
+            &nbsp;&nbsp;<img src="../png/logo.png" style="height: 100%;"> &nbsp;Intelligent Tutor  
+        </div>
+        <!-- Line -->
+        <div class="line"></div>
+        <!-- Middle -->
+        <div class="chat_middle" id="chat-box">     
+        </div>
+        <!-- Line -->
+        <div class="line"></div>
+        <!-- Foot -->
+        <div class="chat_foot">
+            <!-- Context -->
+            <textarea style="font-size: 15px;" class="chat_context" id="user-input" cols="30" rows="10" placeholder="Please input...(Press Enter to send / Press Shift + Enter for a new line)"></textarea>
+            <button class="chat_commit" id="submit-btn">Send</button>
+        </div>
+    </div>
+</body>
+</html>

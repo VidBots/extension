@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Import the vis.js library -->
+    <script type="text/javascript" src="../vis/vis.min.js"></script>
+
+    <!-- Import vis.js CSS styles -->
+    <link rel="stylesheet" type="text/css" href="../vis/vis.min.css">
+    
+    <meta name="related_mindmap" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" charset="UTF-8">
+
+    <title>related_mindmap</title>
+    <style>
+      
+
+        body {
+            /* position: absolute; */
+            background-color: #ffffff;
+            /* left: 1%;
+            width: 95%;
+            display: flex;
+            height: 97%; Set height to viewport height */
+            
+        }
+
+        .mainContainer{
+            position: absolute;
+            background-color: #ffffff;
+            left: 1%;
+            width: 95%;
+            display: flex;
+            height: 97%; /* Set height to viewport height */
+            
+        }
+    
+        .leftColumn {
+            margin-top: 6.5%;
+            flex: 4; /* Occupies 4/7 of the space */
+            border: 4px groove #a9bdbc; /* Border width, style, and color */
+            border-radius: 15px; /* Roundness of the corners */
+        }
+
+        #rightColumn {
+            display: flex;
+            flex-direction: column; /* Arrange child elements vertically */
+            flex: 3; /* Occupies 3/7 of the space */
+        }
+
+
+        #rightTopRow {
+            display: flex;
+            flex: 1; 
+            margin-bottom: 10px;
+            justify-content: flex-end;
+        }
+
+        #rightMidRow {
+            flex: 5; 
+            height: 220px; 
+            margin-bottom: 10px;
+            border: 2px solid rgb(42, 119, 36);
+            margin-left: 5px;
+         
+        }
+
+        #rightBottomRow {
+            flex: 10; 
+            
+            border: 3px solid rgb(42, 119, 36);
+            overflow: auto; /* or overflow: scroll; */
+            border-radius: 10px;
+            margin-left: 5px;
+            padding: 20px; /* Padding */
+        }
+
+                    /* 设置滚动条宽度和颜色 */
+        #rightBottomRow::-webkit-scrollbar {
+            width: 12px;
+            background-color: #f5f5f5;
+        }
+
+        /* 设置滚动条轨道背景颜色 */
+        #rightBottomRow::-webkit-scrollbar-track {
+            background-color: #f5f5f5;
+        }
+
+        /* 设置滚动条 thumb 颜色 */
+        #rightBottomRow::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 6px;
+            border: 3px solid #f5f5f5; /* 可以创建外边框效果 */
+        }
+
+        /* 悬停时滚动条 thumb 颜色 */
+        #rightBottomRow::-webkit-scrollbar-thumb:hover {
+            background-color: #999;
+        }
+
+        .more_button{
+            display: flex;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: inherit;
+        
+            font-size: 28px;
+         
+        }
+
+        /* Hover style for buttons */
+        .more_button:hover {
+        background-color: #bfdf1e; /* Background color on hover */
+        }
+
+        /* Clicked style for buttons */
+        .more_button:active {
+            background-color: #dcfb10; /* Background color on click, can be same or different from default */
+        }
+
+        .close_icon_button{
+        font-size: 22px;
+        border-radius: 20px;
+
+        position:display;
+        border:1px solid #e83313;
+        background: #e83313;
+        color: #fff;
+        z-index: 1000;
+        right: 2%;
+        }
+
+        /* Hover style for buttons */
+        .close_icon_button:hover {
+            border-radius: 20px;
+            border: 1px solid #ff4b2b;
+            background: #ff4b2b;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+    
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+        }
+
+                /* Set height of table container to make it scrollable */
+        .table-container {
+            width: 100%;
+            top: 5%;
+            height: 97%;
+            overflow-y: auto;
+        }
+        
+        .table-container a{
+            text-decoration: none;
+            color: black;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th{
+            position: sticky;
+            top: 0;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 1px;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding-left: 5px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+<div class="mainContainer">
+    <div class="leftColumn" id="contentContainer">
+        <!-- Content of the left column -->
+        
+    </div>
+    <div id="rightColumn">
+        <div id="rightTopRow">
+            <button id="more_button" class="more_button" ><i class="fa fa-ellipsis-h"></i></button>
+            <button id="close_button" class="close_icon_button"><i class="fa fa-close"></i></button>
+        </div>
+        <div id="rightMidRow">
+            <div class="table-container">
+                <!-- Table -->
+                <table id="myTable">
+                    <!-- Table header -->
+                    <thead>
+                        <tr>
+                            <th>Related Course List Click to Jump!</th>
+                            <!-- Add more headers -->
+                        </tr>
+                    </thead>
+                    <!-- Table content -->
+                    <tbody id="tableBody">
+                        <!-- Dynamically generated table content -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="rightBottomRow">
+            <!-- Content of the bottom right row -->
+            <h3>Distributed Systems</h3>
+            <p style=" word-break: break-all;">&nbsp;&nbsp;&nbsp;&nbsp;A distributed system consists of multiple computers that communicate and collaborate through a network to accomplish common tasks or provide services. Unlike centralized systems, distributed systems are characterized by having their components distributed across different geographical locations and connected through communication networks.
+
+                Here are some key concepts and features of distributed systems:
+                
+                Multiple Nodes: A distributed system consists of multiple nodes, each of which is an independent computer or server. These nodes can be physical machines or virtual machines.
+                
+                Network Communication: Nodes in a distributed system communicate through a network. Communication between nodes is crucial for collaborative work and resource sharing.
+                
+                Concurrency: Distributed systems typically exhibit high levels of concurrency, meaning multiple tasks can be executed simultaneously. This is achieved by distributing tasks among different nodes.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/related_mindmap.js"></script>
+</html>

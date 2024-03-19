@@ -1,0 +1,103 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- main.js (inline JS will trigger CSP) -->
+    <script src="main.js"></script>
+    <!-- Import vis.js library -->
+    <script type="text/javascript" src="./vis/vis.min.js"></script>
+
+    <!-- Import mind map and graph JS files -->
+    <script src="js/mindmap.js"></script>
+    <script src="js/graph.js"></script>
+    <!-- Import vis.js CSS styles -->
+    <link rel="stylesheet" type="text/css" href="./vis/vis.min.css">
+
+    <!-- Import w3.css library and font-awesome.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  
+    <!-- Import main.css library -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" charset="UTF-8">
+
+
+
+    <style>
+        body {
+            background-color: rgb(252, 255, 252);
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* Set container height to 100% of viewport height */
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="w3-bar " style="width:100%;left:0%;height:7.5%;top:0%;position:fixed;display: flex; justify-content:space-between;background: linear-gradient(to left, #3d7a56, transparent);">
+            
+            <div style="left:1%;width:60%;padding-left:2%;height: 100%;display: flex;flex-direction:column">
+
+                <span class="bar_font1">
+                    <img src = "png/logo.png" class="img_logo"></img>VidBot </span>
+                <span class="bar_font2" style="font-size:12.5px">&nbsp;Visual Learning Assistant</span>
+
+            </div>
+
+            <div style="width:60%;padding-left:2%;height: 100%;display: inline-flex;">
+
+                <button id="bar_star_button" class="bar_icon_button" style="font-size: 3.5vh;"><i class="fa fa-star " ></i></button>
+                <button id="bar_record_button" class="bar_icon_button" style="font-size: 3.5vh;"><i class="fa fa-clock-o"></i></button>
+                <button id="bar_tools_button" class="bar_icon_button" style="font-size: 3.5vh;"><i class="fa fa-ellipsis-h"></i></button>
+                <button id="close_button" class="close_icon_button" style="font-size: 3.5vh;"><i class="fa fa-close"></i></button>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="function-bar" style="width:95%;left:2%;position: fixed;top:8.7%;height:5%;display: flex; justify-content:space-between">
+            <button id="mindmap_button" class=" mindmap_button " style="width:23%;left:2%;position: relative; padding: 2%;"><b style="font-size: 2.5vw;line-height: 0.9;">Mind Mapping</b></button>
+            <button id="graph_button" class="graph_button" style="width:23%;left:2%;position: relative;padding: 2%;"><b style="font-size: 2.5vw;line-height: 0.9;">Knowledge Graph</b></button>
+
+            <button id="assistant_button" class="chat_button" style="width:23%;left:2%;position: relative;padding: 2%;"><b style="font-size: 2.5vw;line-height: 0.9;">Intelligent Tutor</b></button>
+            <button id="blackboard_button" class="markdown_button" style="width:23%;left:2%;position: relative;padding: 2%;"><b style="font-size: 2.5vw;line-height: 0.9;">Shared Notes</b></button>
+            <!-- Add more buttons if needed -->
+        </div>
+
+        <div style="width:100%;position: fixed;top:13.5%;display: flex; justify-content:flex-end">
+
+            <a href="#" class="w3-button w3-small"><i class="fa fa-paint-brush "style="font-size: 5vw;"></i></a>
+            <a href="#" class="w3-button w3-small"><i class="fa fa-pencil"style="font-size: 5vw;"></i></a>
+            <a href="#" class="w3-button w3-small"><i class="fa fa-file-text"style="font-size: 5vw;"></i></a>
+            <a href="#" class="w3-button w3-small"><i class="fa fa-download"style="font-size: 5vw;"></i></a>
+
+
+        </div>
+
+        <div id="contentContainer" style="width:90%;height:80%;top:18.5%;left:5%;position: fixed;">
+            <!-- Page content -->
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

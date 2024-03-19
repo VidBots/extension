@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- 添加js文件 -->
+  <script src="../js/feedback.js"></script>
+  <title>VidBot问题反馈</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .file-input {
+      display: none; /* 隐藏原生文件输入 */
+    }
+
+    .file-label {
+      cursor: pointer;
+      display: inline-block;
+      background-color: #093a6ec0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .file-label:hover {
+      background-color: #0056b3;
+    }
+
+    button {
+      display: block; /* 修改这行样式 */
+      background-color: #093a6ec0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>VidBot问题反馈</h1>
+
+<form id="feedbackForm">
+  <label for="name">姓名:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">电子邮件:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="issueType">问题类型:</label>
+  <select id="issueType" name="issueType" required>
+    <option value="bug">Bug报告</option>
+    <option value="feature">新功能建议</option>
+    <option value="other">其他问题</option>
+  </select>
+
+  <label for="message">问题或反馈:</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
+
+  <input type="file" id="image" name="image" accept="image/*" class="file-input">
+  <label for="image" class="file-label"><i class="fa fa-plus-circle"></i> 选择问题截图 (可选)</label>
+  <span id="file-label">未选择文件</span>
+
+  <button type="button" id = "feedbackButton">提交反馈</button>
+</form>
+
+
+</body>
+</html>

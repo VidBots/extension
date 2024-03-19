@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>共享笔记</title>
+    <!-- 引入 editormd 样式和脚本文件 -->
+    <link rel="stylesheet" href="../editor/css/editormd.min.css">
+    <script src="../editor/js/jquery.min.js"></script>
+    <script src="../editor/lib/marked.min.js"></script>
+    <script src="../editor/lib/prettify.min.js"></script>
+    <script src="../editor/editormd.js"></script>
+    
+    <style>
+        body {
+            background-color: rgb(252, 255, 252);
+        }
+
+        .container {
+            position: absolute;
+        }
+        .input-container {
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 在 body 中创建用于显示编辑器的元素 -->
+    <div class="container" id="editor"></div>
+    <!-- 引入你的 JavaScript 文件 -->
+    <script src="../js/markdown.js"></script>
+</body>
+</html>

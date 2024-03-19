@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserInfo</title>
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../js/usersettings.js" charset="utf-8"></script>
+    <style type="text/css">
+        .Content-Main{
+            
+            height: 430px;
+            width: 400px;
+            
+            font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-shadow: 1px 1px 1px rgb(255, 255, 255);
+            color: #000000;
+            background: rgb(131, 166, 196);
+        }
+        .Content-Main h1{
+            padding: 5% 5%;
+            display: block;
+            
+            border-bottom: 2px solid rgb(34, 115, 108);
+        }
+        .text1{
+            margin-left: 5px;
+        }
+        .Content-Main label{
+            margin: 0px 0px 5px;
+            display: block;
+        }
+        .fileInputContainer{
+            height: 99px;
+            width: 99px;
+            margin: 20px 20px 20px 20px ;
+            border: none;
+            background: url("../png/user.png")  no-repeat center 0px;
+            background-position: center 0px;
+             background-size: cover;
+
+            overflow: hidden; 
+            position: relative; 
+        }
+        .fileInput{
+            height: 106px;
+            border: none;
+            font-size: 300px;
+            opacity: 0;  
+            filter:alpha(opacity=0);
+            cursor: pointer;
+            position: absolute;
+        }
+        .Content-Main label>span{
+            width: 20%;
+            float: left;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        /* .Main-sex{
+            padding-right: 13px;
+            padding-bottom: 13px;
+            font-weight: bold;
+            line-height: 4px; 
+        }
+        .Main-sex input[type=checkbox]{
+            margin-top:6px;
+            vertical-align:middle; 
+        } */
+        .Content-Main input[type="text"],.Content-Main input[type="email"],.Content-Main textarea{
+            height: 25px;
+            width: 70%;
+            line-height: 15px;
+            padding: 5px 0px 5px 5px; 
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            border: none;
+            border-radius:2px;
+            -webkit-border-radius:2px;
+            -moz-border-radius:2px;
+            outline: 0 none; 
+            background:  #113e0009;
+            color: #000000;
+        }
+        .Content-Main textarea{
+            height: 100px;
+            width: 70%;
+            padding: 5px 0px 0px 5px;
+        }
+        .Content-Main .button{
+            padding: 8px 24px 8px 24px;
+            margin-bottom: 8px;
+            margin-left: 10%;
+            border-radius: 4px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #FFE477;
+            
+            color: #585858;
+            background: #e8ff1d;
+        }
+        .Content-Main .button:hover{
+            color:  #333;
+            background-color:  #EBEBEB ;
+        }
+
+        .logout-button{
+        font-size: 15px;
+        border-radius: 20px;
+        
+        padding: 5px;
+        margin-left: 65%;
+        margin-bottom: 10%;
+        border:1px solid #e83313b4;
+        background: #e83313b4;
+        color: #fff;
+        z-index: 1000;
+        right: 2%;
+        }
+
+        /* 按钮悬浮时的样式 */
+        .logout-button:hover {
+            border-radius: 20px;
+            border: 1px solid #ff4b2b;
+            background: #ff4b2b;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+    
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+        }
+
+        .change-button{
+            font-size: 15px;
+            border-radius: 20px;
+            
+            padding: 5px;
+            
+            position: absolute;
+            border:1px solid #dacf98;
+            background: #dacf98;
+            color: #fff;
+            z-index: 1000;
+            left: 20%;
+        }
+
+        /* 按钮悬浮时的样式 */
+        .change-button:hover {
+            border-radius: 20px;
+            border: 1px solid #dcbf2e;
+            background: #dcbf2e;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+    
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+        }
+
+        .close_icon_button{
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 5px 10px;
+            position:fixed;
+            border:1px solid #ff4b2b;
+            background: #ff4b2b;
+            color: #fff;
+            z-index: 1000;
+            right: 5%;
+            top: 5%;
+        }
+
+
+        /* 按钮悬浮时的样式 */
+        .close_icon_button:hover {
+            border-radius: 10px;
+            border: 1px solid #ff4b2b;
+            background: #ff4b2b;
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 5px 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+        } 
+     
+    </style>
+</head>
+<body>
+        <div class="Content-Main">
+            <form  action="" method="post" class="form-userInfo">
+                <h1>个人中心</h1>
+                <span class="text1">请在文本框中完善您的个人信息：</span>
+
+                
+                <div class="fileInputContainer">
+                    
+                </div>
+                <label>
+                    <span>姓名:</span>
+                    <input type="text"  name="name" placeholder="请在文本框中填写您的真实姓名：">
+                </label>
+                <!-- <label class="Main-sex">
+                    <span>性别:</span>
+                    <input type="checkbox" class="man">男
+                    <input type="checkbox" class="women">女
+                </label> -->
+                <label>
+                    <span>邮箱 :</span>
+                    <input type="email" name="email" placeholder="123456789@stu.ecnu.edu.cn">
+                </label>
+                <!-- <label>
+                    <span>手机号:</span>
+                    <input type="text" name="phone" placeholder="请在文本框中填写您的手机号">
+                </label>
+                <label>
+                    <span>个人简介:</span>
+                    <textarea id="message" name="message" placeholder="请在文本框中填写您的信息"></textarea>
+                </label> -->
+                <button class="change-button"  id = "change">修改信息</button>
+
+                <button class="logout-button"  id = "logout">退出登录</button>
+
+                <button class="close_icon_button" id = "SettingsClose"><i class="fa fa-close"></i></button>
+
+            </form>
+        </div>
+</body>
+</html>

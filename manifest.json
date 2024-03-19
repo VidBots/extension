@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "VidBot",
+  "version": "1.0.0.2",
+  "description": "基于水杉学堂的视频内容挖掘与播放流量统计的视频智能学习工具。扩展提供一键生成视频大纲内容、知识图谱、智能助教、共享笔记等功能。",
+  "default_locale":"zh_CN",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/main.png"
+  },
+  "icons": {
+    "16": "icons/main16.png",
+    "32": "icons/main32.png",
+    "48": "icons/main64.png",
+    "128": "icons/main128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.shuishan.net.cn/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+ 
+  "web_accessible_resources": [
+    {
+      "resources": [
+        
+        "icons/main.png",
+        "contentscript/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms",
+    "cookies",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://www.shuishan.net.cn/*"
+  ]
+}

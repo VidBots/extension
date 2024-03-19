@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="contentscript/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>VidBot</title>
+    <style>
+        /* Popup container style */
+        .popup-container {
+            width: 300px;
+            height: 188px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Top line style */
+        .top-line {
+            position: absolute;
+            top: 22%;
+            width: 100%;
+            border-top: 1px solid green;
+        }
+
+        .icon_container {
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+
+        /* Underline style */
+        .underline {
+            text-decoration: underline;
+            color: green;
+            margin-top: 20px;
+        }
+
+        /* Flowing text style */
+        .flowing-text {
+            position: absolute;
+            top: 1px;
+            left: 10px;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+
+        .same-row {
+            width: 300px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Right top images container style */
+        .right-top-images {
+            position: fixed;
+            top: 5px;
+            right: 8px;
+        }
+
+        /* Gradient icon style */
+        .gradient-icon {
+            font-size: 80px;
+            background: linear-gradient(to top, rgb(16, 101, 29), rgb(85, 255, 47));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: transform 1s ease-in-out;
+        }
+
+        .gradient-icon:hover {
+            cursor: grabbing;
+            transform: scale(1.2);
+        }
+
+        .gradient-icon:active {
+            transform: scale(.95);
+        }
+
+        .icon_div {
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+
+        /* Loading icon style */
+        .loading-icon {
+            font-size: 23px;
+            margin-bottom: 10px;
+            background: linear-gradient(to top, rgb(40, 211, 65), rgb(48, 158, 92));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* User icon style */
+        .user-icon {
+            font-size: 23px;
+            background: linear-gradient(to top, rgb(40, 211, 65), rgb(48, 158, 92));
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: transform 1s ease-in-out;
+            color: transparent;
+        }
+
+        .user-icon:hover {
+            cursor: grabbing;
+            transform: scale(1.2);
+        }
+
+        .user-icon:active {
+            transform: scale(.95);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-container">
+        <div class="flowing-text">
+            <span style="font-size: 18px;color: #298248;font-family: 'Times New Roman', serif; font-style: italic;"><i class="fa fa-google-wallet fa-xx" style="color: #298248;"></i> VidBot</span><br>
+            <span style=" color: green; font-size: 13px;font-family: 'SimSun', sans-serif;font-weight: bolder;">&nbsp;&nbsp;&nbsp;Video Learning Assistant</span>
+        </div>
+        <div class="icon_container">
+            <i class="fa fa-power-off gradient-icon" id="summarizeButton"></i>
+        </div>
+
+        <div class="same-row">
+            <a href="contentscript/html/privacy.html" class="underline" target="_blank">Privacy Policy</a>
+            <span style="margin: 0 10px;">&nbsp;&nbsp;&nbsp;</span>
+            <a href="contentscript/html/feedback.html" class="underline" target="_blank">Feedback</a>
+        </div>
+
+        <div class="top-line"></div>
+    </div>
+
+    <!-- Right top images container -->
+    <div class="right-top-images">
+        <i class="fa fa-user-circle-o user-icon" id="userlogin"></i>
+        <a href="contentscript/html/settings.html" target="_blank" class="w3-button w3xxlarge" style="font-size:27px; top: 0px;margin-left: 5px;height: 20px;position: relative;color: green;"><i class="fa fa-cog user-icon"></i></a>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

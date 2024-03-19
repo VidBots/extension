@@ -1,0 +1,225 @@
+.img_logo{
+    width: 10vw; 
+    height: 5vh; 
+}
+
+@media screen and (max-height: 500px) {
+    .img_logo {
+        width: 5vh;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .img_logo {
+        width: 5vh;
+    }
+}
+
+.bar_font1{
+    font-size: 2.5vmax;
+    background: linear-gradient(to right, #010918, #130101);
+    background-clip: text;-webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Times New Roman', serif; font-style: italic; 
+}
+
+@media screen and (max-height: 500px) {
+    .bar_font1 {
+        font-size: 2.5vmax;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .bar_font1 {
+        font-size: 15px;
+    }
+}
+
+.bar_font2{
+    font-size: 4vmin;
+    background: linear-gradient(to right, #010c21, #150101);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-family: 'SimSun';font-weight: bolder;
+    line-height: 100%;
+    
+}
+
+
+
+@media screen and (min-width: 450px) {
+    .bar_font2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .bar_font2 {
+        font-size: 3.4vmin;
+        
+    }
+    
+}
+
+
+.close_icon_button{
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    width: 25%;
+}
+
+  /* 按钮悬浮时的样式 */
+  .close_icon_button:hover {
+    background-color: #c13333; /* 悬浮时的背景颜色 */
+  }
+
+  /* 按钮被点击时的样式 */
+  .close_icon_button:active {
+    background-color: #d52c2c; /* 点击时的背景颜色，可以与默认颜色相同或不同 */
+  }
+
+  .bar_icon_button{
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    width: 25%;
+}
+
+  /* 按钮悬浮时的样式 */
+  .bar_icon_button:hover {
+    background-color: #dce9da; /* 悬浮时的背景颜色 */
+  }
+
+  /* 按钮被点击时的样式 */
+  .bar_icon_button:active {
+    background-color: #dce9da; /* 点击时的背景颜色，可以与默认颜色相同或不同 */
+  }
+
+
+
+.mindmap_button{
+   
+    background: linear-gradient(to right, #040400, #00050f, #040000);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 5px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+
+.mindmap_button:hover{
+    color:#ffffff;
+    background: #4f8055; /* 悬浮时的背景颜色 */
+}
+
+@media screen and (max-height: 500px) {
+    .mindmap_button {
+        line-height: 30%;
+    }
+}
+
+.graph_button{
+   
+    background: linear-gradient(to right, #040400, #00050f, #040000);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 5px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+.graph_button:hover{
+    color:#ffffff;
+    background: #4f8055; /* 悬浮时的背景颜色 */
+}
+
+.temp_button_style{
+    color:#ffffff;
+    background: #4f8055; /* 悬浮时的背景颜色 */
+    line-height: 5px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+
+
+@media screen and (max-height: 500px) {
+    .graph_button {
+        line-height: 30%;
+    }
+}
+
+.chat_button{
+  
+    background: linear-gradient(to right, #040400, #00050f, #040000);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 5px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+.chat_button:hover{
+    color:#ffffff;
+    background: #4f8055; /* 悬浮时的背景颜色 */
+}
+
+
+@media screen and (max-height: 500px) {
+    .chat_button {
+        line-height: 30%;
+    }
+}
+.markdown_button{
+
+    background: linear-gradient(to right, #040400, #00050f, #040000);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    line-height: 5px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+.markdown_button:hover{
+    color:#ffffff;
+    background: #4f8055; /* 悬浮时的背景颜色 */
+}
+
+
+
+@media screen and (max-height: 500px) {
+    .markdown_button {
+        line-height: 30%;
+    }
+}
+
+/* 定义graph的子容器样式 */
+
+.graph_tips{
+   
+    width: 100%;
+    height: 5%;
+    text-indent: 15%;
+    font-weight: bold;
+
+  
+    font-family: 'Comic Sans MS', cursive; /* 使用动漫风格字体 */
+}

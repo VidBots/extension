@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/marked.min.js"></script>
+    <script src="../js/sharenotes.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Style imports -->
+    <link rel="stylesheet" type="text/css" href="../css/sharenotes.css">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+    
+</head>
+
+<body>
+    <!-- Entry -->
+    <div class="mainContainer" id="mainContainer">
+        <!-- Top bar -->
+        <div class="topBar">
+            <div class="dropdown" id="notesOption">
+                <button class="dropbtn" style="font-size: 12px;"><b>Lecture Notes</b> <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Related Topics</a>
+                  <a href="#">Related Exercises</a>
+                </div>
+              </div>
+              <i class="fa fa-edit markdown-icon" id="markdownButton" title="Click to toggle editing mode"></i>
+        </div>
+        <!-- Line -->
+        <div class="line"></div>
+        <!-- Middle -->
+        <div class="notesContent" id="notesContent" style=" word-break: break-all;">
+        </div>
+        <!-- Footer -->
+        <div class="feedbackFoot">
+            <!-- Context -->
+            <textarea class="feedbackContext" id="user-input" cols="30" rows="10" placeholder="Feedback on lecture notes..."></textarea>
+            <button class="feedbackCommit" id="submit-btn">Send</button>
+        </div>
+    </div>
+
+    <iframe src="./markdown.html" style="display: none;" id="markdownHtml" class="mainContainer2" frameborder="0"> </iframe>
+
+</body>
+</html>
